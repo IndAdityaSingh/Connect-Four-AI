@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect 4 - AI Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>🎮 Connect 4</h1>
+        <p class="subtitle">Challenge the AI</p>
+    </header>
+
+    <div class="game-info">
+        <div class="player-info">
+            <span class="player-badge human">You (Yello)</span>
+            <span class="score" id="human-score">0</span>
+        </div>
+        <div class="player-info">
+            <span class="player-badge ai">AI (Red)</span>
+            <span class="score" id="ai-score">0</span>
+        </div>
+    </div>
+
+    <div class="game-status" id="game-status">Your turn</div>
+
+    <div id="game-board" class="connect-4"></div>
+
+    <div class="controls">
+        <button id="new-game-btn" class="btn btn-primary">New Game</button>
+        <button id="reset-score-btn" class="btn btn-secondary">Reset Scores</button>
+    </div>
+
+    <div class="difficulty-selector">
+        <label for="difficulty">AI Difficulty:</label>
+        <select id="difficulty">
+            <option value="1">Easy (Depth 2)</option>
+            <option value="4" selected>Medium (Depth 4)</option>
+            <option value="6">Hard (Depth 6)</option>
+        </select>
+    </div>
+
+    <div class="info-section">
+        <h3>How to Play</h3>
+        <ul>
+            <li>Click on a column to drop your piece</li>
+            <li>Connect 4 pieces in a row to win</li>
+            <li>You are Yellow, AI is Red</li>
+            <li>Adjust difficulty before starting a new game</li>
+        </ul>
+    </div>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
